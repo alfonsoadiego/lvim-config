@@ -6,9 +6,11 @@ In order to get started with this IDE setup please remember to run the following
 
 `:MasonInstall gopls golangci-lint-langserver delve goimports gofumpt gomodifytags gotests impl`
 
-## For JAva
+## For Java
 
 Ensure installed
 
 `:MasonInstall jdtls java-debug-adapter java-test`
 
+Prevent default jdtls config, so it gets the ftplugin one
+`vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" })`
